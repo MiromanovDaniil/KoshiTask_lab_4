@@ -55,7 +55,7 @@ namespace KoshiTask_lab_4
             this.label1.Font = new System.Drawing.Font("Times New Roman", 10.86792F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(594, 59);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 19);
+            this.label1.Size = new System.Drawing.Size(47, 19);
             this.label1.TabIndex = 2;
             this.label1.Text = "eps = ";
             // 
@@ -76,7 +76,7 @@ namespace KoshiTask_lab_4
             // Run_Runge_Kutta_3
             // 
             this.Run_Runge_Kutta_3.Font = new System.Drawing.Font("Times New Roman", 10.86792F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Run_Runge_Kutta_3.Location = new System.Drawing.Point(620, 291);
+            this.Run_Runge_Kutta_3.Location = new System.Drawing.Point(598, 201);
             this.Run_Runge_Kutta_3.Name = "Run_Runge_Kutta_3";
             this.Run_Runge_Kutta_3.Size = new System.Drawing.Size(166, 48);
             this.Run_Runge_Kutta_3.TabIndex = 4;

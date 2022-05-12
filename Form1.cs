@@ -15,6 +15,9 @@ namespace KoshiTask_lab_4
     {
         //Создаю массив координат концов кривых.
         PointPairList end_point = new PointPairList();
+      
+        //Создаю массив координат начал кривых.
+        PointPairList start_point = new PointPairList();
 
         double eps = 0.1;
         double h = 0.002;
@@ -32,6 +35,11 @@ namespace KoshiTask_lab_4
             if (point.X == 0 && point.Y == 1 || point.X == 0 && point.Y == -1 || point.X == 1 && point.Y == 0 || point.X == -3 && point.Y == 2)
             {
                 result = string.Format("X: {0:F3}\nY: {1:F3}\nОсобая точка!", point.X, point.Y);
+            }
+
+            if (start_point.Contains(new PointPair(point.X, point.Y))) 
+            {
+                result = string.Format("X: {0:F3}\nY: {1:F3}\nНачало кривой!", point.X, point.Y);
             }
 
             if (end_point.Contains(new PointPair(point.X, point.Y)))
@@ -127,7 +135,7 @@ namespace KoshiTask_lab_4
                 myCurve[i + t].Symbol.Size = 3;                   //Размер кружков.
 
                 // Добавляю концы кривой в массив концов кривых, для их отображения при наведении.
-                end_point.Add(myCurve[i + t][0].X, myCurve[i + t][0].Y);
+                start_point.Add(myCurve[i + t][0].X, myCurve[i + t][0].Y);
                 end_point.Add(myCurve[i + t][myCurve[i + t].Points.Count - 1].X, myCurve[i + t][myCurve[i + t].Points.Count - 1].Y);
 
                 myCurve[i + t + 1].Line.IsVisible = false;
@@ -135,7 +143,7 @@ namespace KoshiTask_lab_4
                 myCurve[i + t + 1].Symbol.Fill.Type = FillType.Solid;
                 myCurve[i + t + 1].Symbol.Size = 3;
 
-                end_point.Add(myCurve[i + t + 1][0].X, myCurve[i + t + 1][0].Y);
+                start_point.Add(myCurve[i + t + 1][0].X, myCurve[i + t + 1][0].Y);
                 end_point.Add(myCurve[i + t + 1][myCurve[i + t + 1].Points.Count - 1].X, myCurve[i + t + 1][myCurve[i + t + 1].Points.Count - 1].Y);
 
                 myCurve[i + t + 2].Line.IsVisible = false;
@@ -143,7 +151,7 @@ namespace KoshiTask_lab_4
                 myCurve[i + t + 2].Symbol.Fill.Type = FillType.Solid;
                 myCurve[i + t + 2].Symbol.Size = 3;
 
-                end_point.Add(myCurve[i + t + 2][0].X, myCurve[i + t + 2][0].Y);
+                start_point.Add(myCurve[i + t + 2][0].X, myCurve[i + t + 2][0].Y);
                 end_point.Add(myCurve[i + t + 2][myCurve[i + t + 2].Points.Count - 1].X, myCurve[i + t + 2][myCurve[i + t + 2].Points.Count - 1].Y);
 
                 myCurve[i + t + 3].Line.IsVisible = false;
@@ -151,7 +159,7 @@ namespace KoshiTask_lab_4
                 myCurve[i + t + 3].Symbol.Fill.Type = FillType.Solid;
                 myCurve[i + t + 3].Symbol.Size = 3;
 
-                end_point.Add(myCurve[i + t + 3][0].X, myCurve[i + t + 3][0].Y);
+                start_point.Add(myCurve[i + t + 3][0].X, myCurve[i + t + 3][0].Y);
                 end_point.Add(myCurve[i + t + 3][myCurve[i + t + 3].Points.Count - 1].X, myCurve[i + t + 3][myCurve[i + t + 3].Points.Count - 1].Y);
 
                 t += 3;
